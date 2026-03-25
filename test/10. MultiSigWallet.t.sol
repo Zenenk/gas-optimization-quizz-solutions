@@ -5,8 +5,9 @@ import "forge-std/Test.sol";
 import "src/10. MultiSigWallet.sol";
 
 contract MultiSigWalletOptimizedTest is Test {
-/* YOUR SOLUTION GOES HERE */
-}
+    /* YOUR SOLUTION GOES HERE */
+
+    }
 
 // forge test --match-contract MultiSigWallet
 // forge test --match-contract MultiSigWallet --gas-report
