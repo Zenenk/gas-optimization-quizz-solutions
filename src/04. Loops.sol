@@ -32,15 +32,9 @@ contract Loops is ILoops {
 }
 
 contract LoopsOptimized is ILoops {
-    function loopFor() public pure {
-        /* YOUR SOLUTION GOES HERE */
-    }
+    function loopFor() public pure {}
 
-    function loopWhile() public pure {
-        /* YOUR SOLUTION GOES HERE */
-    }
+    function loopWhile() public pure {}
 
-    function loopDoWhile() public pure {
-        /* YOUR SOLUTION GOES HERE */
-    }
+    function loopDoWhile() public pure {}
 }

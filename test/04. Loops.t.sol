@@ -4,8 +4,6 @@ pragma solidity ^0.8.25;
 import "forge-std/Test.sol";
 import "src/04. Loops.sol";
 
-// forge test --match-contract Loops
-// forge test --match-contract Loops --gas-report
 contract LoopsTest is Test {
     Loops loops;
 
@@ -27,5 +25,21 @@ contract LoopsTest is Test {
 }
 
 contract LoopsOptimizedTest is Test {
-/* YOUR SOLUTION GOES HERE */
+    LoopsOptimized loops;
+
+    function setUp() public {
+        loops = new LoopsOptimized();
+    }
+
+    function test_for() public view {
+        loops.loopFor();
+    }
+
+    function test_while() public view {
+        loops.loopWhile();
+    }
+
+    function test_doWhile() public view {
+        loops.loopDoWhile();
+    }
 }

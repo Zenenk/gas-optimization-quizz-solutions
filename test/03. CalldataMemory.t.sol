@@ -4,8 +4,6 @@ pragma solidity ^0.8.25;
 import "forge-std/Test.sol";
 import "src/03. CalldataMemory.sol";
 
-// forge test --match-contract CalldataMemory
-// forge test --match-contract CalldataMemory --gas-report
 contract CalldataMemoryTest is Test {
     CalldataMemory calldataMemory;
     uint256[] arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -20,5 +18,14 @@ contract CalldataMemoryTest is Test {
 }
 
 contract CalldataMemoryOptimizedTest is Test {
-/* YOUR SOLUTION GOES HERE */
+    CalldataMemoryOptimized calldataMemory;
+    uint256[] arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    function setUp() public {
+        calldataMemory = new CalldataMemoryOptimized();
+    }
+
+    function test_Call() public view {
+        calldataMemory.add(arr);
+    }
 }
